@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forex Survivors - Professional Forex Trading</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      position: relative;
+      background: linear-gradient(135deg, #0d0d0d 0%, #111 100%);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 1%, transparent 1%) repeat;
+      background-size: 50px 50px;
+      animation: moveBackground 20s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes moveBackground {
+      0% { transform: translate(0,0) rotate(0deg);}
+      100% { transform: translate(50px,50px) rotate(360deg);}
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero-content img {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #00ff00; /* Brand Green */
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      color: #f44336; /* Brand Red */
+    }
+
+    .trust-badges span {
+      display: inline-block;
+      margin: 0 15px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* Chart Section */
+    .chart-section {
+      padding: 50px 20px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    .chart-section h2 {
+      color: #00ff00;
+      margin-bottom: 30px;
+    }
+
+    /* Book Section */
+    .book-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .book-section h2 { color: #00ff00; margin-bottom: 20px; }
+    .book-section p { color: #ccc; margin-bottom: 30px; }
+    .book-section a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #f44336;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .book-section a:hover { background: #00ff00; color: #000; }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 30px 20px;
+      background-color: #111;
+      text-align: center;
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0a0a0a;
+      color: #777;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width:768px){
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="logo.png" alt="Forex Survivors Logo">
+      <h1>Forex Survivors</h1>
+      <p>Learn, Trade & Grow Your Wealth with Expert Guidance</p>
+      <div class="trust-badges">
+        <span>Trusted by 5,000+ traders</span>
+        <span>Regulated & Secure</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Chart Section -->
+  <section class="chart-section">
+    <h2>Live Forex Chart</h2>
+    <!-- TradingView Widget -->
+    <div class="tradingview-widget-container">
+      <div id="tradingview_12345"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <script type="text/javascript">
+      new TradingView.widget({
+        "width": "100%",
+        "height": 500,
+        "symbol": "FX:EURUSD",
+        "interval": "60",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#111",
+        "enable_publishing": false,
+        "hide_top_toolbar": true,
+        "save_image": false,
+        "container_id": "tradingview_12345"
+      });
+      </script>
+    </div>
+  </section>
+
+  <!-- Book Section -->
+  <section class="book-section">
+    <h2>Get My Forex Book</h2>
+    <p>Learn the secrets of Forex trading and improve your strategy with my comprehensive guide.</p>
+    <a href="#">Buy Now</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    Contact us: <strong>0750577541</strong>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Forex Survivors. All rights reserved.
+  </footer>
+
+</body>
+</html>
